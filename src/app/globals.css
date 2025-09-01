@@ -16,7 +16,7 @@ body {
     --popover-foreground: 224 71% 4%;
     --primary: 217 91% 60%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 220 13% 91%;
+    --secondary: 220 13% 95%;
     --secondary-foreground: 224 71% 4%;
     --muted: 220 13% 91%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -84,16 +84,6 @@ body {
   }
   body {
     @apply bg-background text-foreground;
-     background-color: #ffffff;
-    background-image:
-      radial-gradient(at 88% 40%, hsla(220, 13%, 91%, 0.4) 0px, transparent 50%),
-      radial-gradient(at 63% 4%, hsla(220, 13%, 91%, 0.4) 0px, transparent 50%),
-      radial-gradient(at 95% 68%, hsla(220, 13%, 91%, 0.4) 0px, transparent 50%),
-      radial-gradient(at 49% 94%, hsla(220, 13%, 91%, 0.4) 0px, transparent 50%),
-      radial-gradient(at 13% 6%, hsla(220, 13%, 91%, 0.4) 0px, transparent 50%),
-      radial-gradient(at 35% 36%, hsla(220, 13%, 91%, 0.4) 0px, transparent 50%),
-      radial-gradient(at 58% 52%, hsla(220, 14%, 96%, 0.4) 0px, transparent 50%);
-    background-attachment: fixed;
   }
   section {
     @apply py-16 sm:py-20;
