@@ -35,10 +35,16 @@ export default function RootLayout({
           'min-h-screen bg-background font-body antialiased'
         )}
       >
-        <Header />
-        <main className="flex-grow">{children}</main>
-        <Footer />
-        <Toaster />
+        <div className="relative z-0 overflow-hidden">
+          <div className="absolute top-0 -left-64 w-96 h-96 bg-secondary rounded-full opacity-30 animate-pulse" />
+          <div className="absolute -bottom-64 -right-32 w-96 h-96 bg-secondary rounded-full opacity-30 animate-pulse animation-delay-3000" />
+          <div className="relative z-10">
+            <Header />
+            <main className="flex-grow">{children}</main>
+            <Footer />
+            <Toaster />
+          </div>
+        </div>
       </body>
     </html>
   );
