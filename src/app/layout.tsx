@@ -42,9 +42,9 @@ export default function RootLayout({
             <Header />
             <main className="flex-grow animate-in fade-in duration-500">{children}</main>
             <Footer />
-            <Toaster />
           </div>
         </div>
+        <Toaster />
       </body>
     </html>
   );
