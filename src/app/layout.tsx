@@ -26,19 +26,19 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Playfair+Display:wght@700;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap"
           rel="stylesheet"
         />
       </head>
       <body
         className={cn(
-          'min-h-screen bg-background font-body antialiased'
+          'min-h-screen bg-background font-body antialiased flex flex-col'
         )}
       >
-        <div className="relative z-0 overflow-x-clip">
+        <div className="relative z-0 overflow-x-clip flex flex-col flex-grow">
           <div className="absolute top-0 -left-64 w-96 h-96 bg-secondary rounded-full opacity-30 animate-pulse" />
           <div className="absolute -bottom-64 -right-32 w-96 h-96 bg-secondary rounded-full opacity-30 animate-pulse animation-delay-3000" />
-          <div className="relative z-10">
+          <div className="relative z-10 flex flex-col flex-grow">
             <Header />
             <main className="flex-grow animate-in fade-in duration-500">{children}</main>
             <Footer />
