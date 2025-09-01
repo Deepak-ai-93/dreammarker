@@ -84,16 +84,16 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <section className="w-full pt-20 md:pt-32 lg:pt-40 bg-secondary/30">
-        <div className="container px-4 md:px-6 text-center animate-in fade-in slide-in-from-bottom-8 duration-1000">
-          <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+        <div className="container px-4 md:px-6 text-center">
+          <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl animate-in fade-in slide-in-from-bottom-8 duration-1000">
             Weaving Digital Dreams into Reality
           </h1>
-          <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl my-6">
+          <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl my-6 animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-200">
             At DreamWeave Digital, we combine creativity and technology to build
             unforgettable digital experiences that drive growth and connect you with
             your audience.
           </p>
-          <div className="space-x-4">
+          <div className="space-x-4 animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-400">
             <Button asChild size="lg">
               <Link href="/contact">Get Started</Link>
             </Button>
