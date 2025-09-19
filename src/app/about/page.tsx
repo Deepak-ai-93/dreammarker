@@ -36,7 +36,7 @@ export default function AboutPage() {
           </div>
           <div className="animate-in fade-in slide-in-from-right-8 duration-1000">
             <Image
-              src="https://picsum.photos/800/600?random=10"
+              src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMnx8bWFya2V0aW5nfGVufDB8fHx8MTc1ODIxNDU2MHww&ixlib=rb-4.1.0&q=80&w=1080"
               data-ai-hint="team meeting"
               alt="Team collaborating"
               width={800}
