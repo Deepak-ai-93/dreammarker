@@ -182,24 +182,27 @@ export default function Home() {
             A streamlined and collaborative approach to delivering exceptional results.
           </p>
         </div>
-        <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:max-w-none lg:grid-cols-3 mt-12">
+        <div className="relative mt-12">
+          <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-border" aria-hidden="true"></div>
           {howWeWork.map((step, index) => (
-            <div key={index} className="animate-in fade-in-0 slide-in-from-bottom-4 duration-1000" style={{ animationDelay: `${200 * index}ms`}}>
-              <Card
-                className="transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl border-transparent hover:border-border"
-              >
-                <CardHeader className="flex flex-col items-center text-center gap-4">
+            <div key={index} className="relative mb-12">
+              <div className="flex items-center">
+                <div className={`flex-1 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                  {/* Empty div for spacing on one side */}
+                </div>
+                <div className="absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-background border-2 border-primary flex items-center justify-center">
                   {step.icon}
-                  <CardTitle className="text-2xl">
-                    {step.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="text-center">
-                  <p className="text-muted-foreground">
-                    {step.description}
-                  </p>
-                </CardContent>
-              </Card>
+                </div>
+                <div className={`flex-1 ${index % 2 === 0 ? 'pl-8 text-left' : 'pr-8 text-right'}`}>
+                  {/* Empty div for spacing on other side */}
+                </div>
+              </div>
+              <div className={`mt-4 w-1/2 ${index % 2 === 0 ? 'ml-auto pr-16' : 'mr-auto pl-16'}`}>
+                 <div className={`p-6 rounded-lg bg-card shadow-sm border ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
+                  <h3 className="text-2xl font-bold mb-2">{step.title}</h3>
+                  <p className="text-muted-foreground">{step.description}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
