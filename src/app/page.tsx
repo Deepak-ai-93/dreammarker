@@ -9,6 +9,10 @@ import {
   BrainCircuit,
   Users,
   TrendingUp,
+  ClipboardCheck,
+  Rocket,
+  Lightbulb,
+  HeartHandshake,
 } from 'lucide-react';
 import AnimatedHeroText from '@/components/home/AnimatedHeroText';
 
@@ -35,12 +39,12 @@ const services = [
 
 const whyChooseUs = [
     {
-        icon: <BrainCircuit className="w-10 h-10 text-primary" />,
+        icon: <Lightbulb className="w-10 h-10 text-primary" />,
         title: "Data-Driven Strategy",
         description: "We leverage analytics and insights to craft strategies that deliver real, measurable results for your business."
     },
     {
-        icon: <Users className="w-10 h-10 text-primary" />,
+        icon: <HeartHandshake className="w-10 h-10 text-primary" />,
         title: "Collaborative Partnership",
         description: "We believe in working with you, not just for you. Your goals are our goals, and we're a dedicated partner in your success."
     },
@@ -49,6 +53,24 @@ const whyChooseUs = [
         title: "Focus on Results",
         description: "Our primary objective is to drive tangible outcomes that contribute to your growth and return on investment."
     }
+]
+
+const howWeWork = [
+  {
+    icon: <BrainCircuit className="w-10 h-10 text-primary" />,
+    title: "1. Discovery & Strategy",
+    description: "We start by deeply understanding your business, audience, and goals to create a tailored strategy for success."
+  },
+  {
+    icon: <ClipboardCheck className="w-10 h-10 text-primary" />,
+    title: "2. Execution & Delivery",
+    description: "Our team brings the strategy to life, executing with precision and keeping you informed every step of the way."
+  },
+  {
+    icon: <Rocket className="w-10 h-10 text-primary" />,
+    title: "3. Growth & Optimization",
+    description: "We continuously analyze performance, optimize our approach, and identify new opportunities to drive sustainable growth."
+  }
 ]
 
 export default function Home() {
@@ -144,6 +166,40 @@ export default function Home() {
             </Card>
           ))}
         </div>
+        </div>
+      </section>
+
+      <section id="how-we-work" className="container px-4 md:px-6">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm font-medium">
+            Our Process
+          </div>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+            How We Work
+          </h2>
+          <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            A streamlined and collaborative approach to delivering exceptional results.
+          </p>
+        </div>
+        <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:max-w-none lg:grid-cols-3 mt-12">
+          {howWeWork.map((step, index) => (
+            <Card
+              key={index}
+              className="transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl border-transparent hover:border-border"
+            >
+              <CardHeader className="flex flex-col items-center text-center gap-4">
+                {step.icon}
+                <CardTitle className="text-2xl">
+                  {step.title}
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-muted-foreground">
+                  {step.description}
+                </p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </section>
 
