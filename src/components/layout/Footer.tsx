@@ -96,7 +96,7 @@ export default function Footer() {
         </div>
         <div className="mt-8 border-t pt-8 text-center text-sm text-muted-foreground">
           <p>
-            &copy; {new Date().getFullYear()} DreamWeave Digital. All rights
+            &copy; {new Date().getFullYear()} Dreammakers digital. All rights
             reserved.
           </p>
         </div>

@@ -75,7 +75,7 @@ export default function Home() {
         <div className="container px-4 md:px-6 text-center">
           <AnimatedHeroText />
           <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl my-6 animate-in fade-in-2 slide-in-from-bottom-10 duration-1000 delay-200">
-            At DreamWeave Digital, we combine creativity and technology to build
+            At Dreammakers digital, we combine creativity and technology to build
             unforgettable digital experiences that drive growth and connect you with
             your audience.
           </p>

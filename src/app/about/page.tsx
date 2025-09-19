@@ -15,7 +15,7 @@ export default function AboutPage() {
       <section className="w-full pt-32 pb-16 md:pt-40 md:pb-24 bg-secondary/30">
         <div className="container px-4 md:px-6 text-center animate-in fade-in slide-in-from-bottom-8 duration-1000">
           <h1 className="text-4xl font-headline font-bold tracking-tighter sm:text-5xl md:text-6xl">
-            About DreamWeave Digital
+            About Dreammakers digital
           </h1>
           <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl my-6">
             The creative minds behind the digital magic.

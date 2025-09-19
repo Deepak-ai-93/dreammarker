@@ -6,9 +6,9 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 
 export const metadata: Metadata = {
-  title: 'DreamWeave Digital',
+  title: 'Dreammakers digital',
   description:
-    'DreamWeave Digital is a digital marketing, social media, and web development company.',
+    'Dreammakers digital is a digital marketing, social media, and web development company.',
 };
 
 export default function RootLayout({
