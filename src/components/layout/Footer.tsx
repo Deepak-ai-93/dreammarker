@@ -12,7 +12,6 @@ const socialLinks = [
 const footerLinks = [
   { href: '/about', label: 'About Us' },
   { href: '/services', label: 'Services' },
-  { href: '/case-studies', label: 'Case Studies' },
   { href: '/blog', label: 'Blog' },
   { href: '/contact', label: 'Contact' },
   { href: '/privacy-policy', label: 'Privacy Policy' },
@@ -20,7 +19,7 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-background border-t mt-auto">
+    <footer className="bg-background border-t">
       <div className="container mx-auto px-4 py-12 md:px-6">
         <div className="grid gap-8 md:grid-cols-3">
           <div className="space-y-4">
@@ -45,7 +44,7 @@ export default function Footer() {
             <div>
               <h3 className="font-semibold mb-4">Quick Links</h3>
               <ul className="space-y-2">
-                {footerLinks.slice(0, 5).map((link) => (
+                {footerLinks.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
