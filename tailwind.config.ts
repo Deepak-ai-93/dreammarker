@@ -17,8 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['Comfortaa', 'sans-serif'],
-        headline: ['Comfortaa', 'sans-serif'],
+        body: ['Geist Sans', 'sans-serif'],
+        headline: ['Geist Sans', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {

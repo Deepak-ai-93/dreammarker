@@ -71,10 +71,10 @@ const caseStudies = [
 export default function Home() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <section className="w-full pt-20 md:pt-32 lg:pt-40 bg-secondary/30">
+      <section className="w-full pt-24 md:pt-32 lg:pt-40">
         <div className="container px-4 md:px-6 text-center">
           <AnimatedHeroText />
-          <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl my-6 animate-in fade-in-2 slide-in-from-bottom-10 duration-1000 delay-200">
+          <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl my-8 animate-in fade-in-2 slide-in-from-bottom-10 duration-1000 delay-200">
             At Dreammakers digital, we combine creativity and technology to build
             unforgettable digital experiences that drive growth and connect you with
             your audience.
@@ -88,17 +88,14 @@ export default function Home() {
             </Button>
           </div>
         </div>
-        <div className="relative mt-12 h-40 overflow-hidden">
-          <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-background to-transparent" />
-        </div>
       </section>
 
       <section id="services" className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm">
+          <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm font-medium">
             Our Services
           </div>
-          <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
             What We Do Best
           </h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -110,11 +107,11 @@ export default function Home() {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
+              className="transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl border-transparent hover:border-border"
             >
               <CardHeader className="flex flex-col items-center text-center gap-4">
                 {service.icon}
-                <CardTitle className="font-headline text-2xl">
+                <CardTitle className="text-2xl">
                   {service.title}
                 </CardTitle>
               </CardHeader>
@@ -131,13 +128,13 @@ export default function Home() {
         </div>
       </section>
       
-      <section id="why-choose-us" className="bg-secondary/30">
+      <section id="why-choose-us" className="bg-secondary">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <div className="inline-block rounded-lg bg-background px-3 py-1 text-sm">
+            <div className="inline-block rounded-lg bg-background px-3 py-1 text-sm font-medium">
               Why Choose Us
             </div>
-            <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
               Your Partner in Growth
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -148,11 +145,11 @@ export default function Home() {
           {whyChooseUs.map((feature, index) => (
             <Card
               key={index}
-              className="transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
+              className="transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl bg-background"
             >
               <CardHeader className="flex flex-col items-center text-center gap-4">
                 {feature.icon}
-                <CardTitle className="font-headline text-2xl">
+                <CardTitle className="text-2xl">
                   {feature.title}
                 </CardTitle>
               </CardHeader>
@@ -169,10 +166,10 @@ export default function Home() {
 
       <section id="case-studies" className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm">
+          <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm font-medium">
             Our Work
           </div>
-          <h2 className="text-3xl font-headline font-bold tracking-tighter sm:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
             Success Stories
           </h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -195,7 +192,7 @@ export default function Home() {
                 className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <CardContent className="p-6">
-                <h3 className="text-xl font-headline font-bold mb-2">
+                <h3 className="text-xl font-bold mb-2">
                   {study.title}
                 </h3>
                 <p className="text-muted-foreground mb-4">
@@ -215,10 +212,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-accent/20">
+      <section className="bg-secondary">
         <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
           <div className="space-y-3">
-            <h2 className="text-3xl font-headline font-bold tracking-tighter md:text-4xl/tight">
+            <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
               Ready to Weave Your Digital Success Story?
             </h2>
             <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -226,7 +223,7 @@ export default function Home() {
               can help you achieve them.
             </p>
           </div>
-          <div className="mx-auto w-full max-w-sm space-x-2">
+          <div className="mx-auto w-full max-w-sm space-y-4 py-4">
             <Button asChild size="lg">
               <Link href="/contact">Contact Us</Link>
             </Button>

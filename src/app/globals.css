@@ -16,11 +16,11 @@ body {
     --popover-foreground: 224 71% 4%;
     --primary: 225 97% 41%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 220 13% 95%;
+    --secondary: 220 14% 96%;
     --secondary-foreground: 224 71% 4%;
     --muted: 220 13% 91%;
     --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 260 83% 96%;
+    --accent: 220 14% 96%;
     --accent-foreground: 224 71% 4%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
@@ -86,6 +86,6 @@ body {
     @apply bg-background text-foreground;
   }
   section {
-    @apply py-16 sm:py-20;
+    @apply py-20 sm:py-24;
   }
 }
