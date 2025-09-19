@@ -183,24 +183,25 @@ export default function Home() {
             A streamlined and collaborative approach to delivering exceptional results.
           </p>
         </div>
-        <div className="relative mt-16">
-          <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-border -z-10"></div>
-          <div className="grid md:grid-cols-1 gap-16">
+        <div className="relative mt-16 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-0">
             {howWeWork.map((step, index) => (
               <div
                 key={index}
-                className="flex items-center gap-8 animate-in fade-in-0 slide-in-from-bottom-8 duration-1000"
+                className="flex flex-col items-center text-center p-4 animate-in fade-in-0 slide-in-from-bottom-8 duration-1000"
                 style={{ animationDelay: `${200 * index}ms` }}
               >
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-secondary text-primary shadow-md">
+                <div
+                  className="relative flex h-24 w-24 items-center justify-center rounded-full bg-secondary text-primary shadow-md mb-4 transition-all duration-300 hover:scale-110"
+                >
                   {step.icon}
                 </div>
-                <div className="flex-1">
+                <Card className="bg-card w-full -mt-12 pt-16 pb-6 px-6 shadow-lg hover:shadow-2xl transition-shadow duration-300">
                   <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground text-sm">
                     {step.description}
                   </p>
-                </div>
+                </Card>
               </div>
             ))}
           </div>
