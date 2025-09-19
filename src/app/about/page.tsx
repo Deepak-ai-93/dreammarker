@@ -3,13 +3,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Award, Target, Eye } from 'lucide-react';
 import Image from 'next/image';
 
-const teamMembers = [
-  { name: 'Alice Johnson', role: 'Founder & CEO', avatar: 'https://picsum.photos/150/150?random=11', dataAiHint: 'person face' },
-  { name: 'Bob Williams', role: 'Head of Marketing', avatar: 'https://picsum.photos/150/150?random=12', dataAiHint: 'person face' },
-  { name: 'Charlie Brown', role: 'Lead Developer', avatar: 'https://picsum.photos/150/150?random=13', dataAiHint: 'person face' },
-  { name: 'Diana Miller', role: 'Social Media Guru', avatar: 'https://picsum.photos/150/150?random=14', dataAiHint: 'person face' },
-];
-
 const values = [
   { icon: <Award className="w-8 h-8 text-primary" />, title: 'Excellence', description: 'We are committed to delivering the highest quality work and exceptional results for our clients.' },
   { icon: <Target className="w-8 h-8 text-primary" />, title: 'Innovation', description: 'We stay at the forefront of digital trends to provide creative and effective solutions.' },
@@ -71,25 +64,6 @@ export default function AboutPage() {
                 </Card>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="container px-4 md:px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-headline font-bold">Meet the Team</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mt-2">The master weavers behind your digital success.</p>
-        </div>
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {teamMembers.map((member) => (
-            <div key={member.name} className="flex flex-col items-center text-center">
-              <Avatar className="w-32 h-32 mb-4 shadow-lg">
-                <AvatarImage src={member.avatar} data-ai-hint={member.dataAiHint} />
-                <AvatarFallback>{member.name.substring(0, 2)}</AvatarFallback>
-              </Avatar>
-              <h3 className="font-bold text-lg">{member.name}</h3>
-              <p className="text-sm text-primary">{member.role}</p>
-            </div>
-          ))}
         </div>
       </section>
     </>
