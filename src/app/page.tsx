@@ -7,12 +7,11 @@ import {
   LineChart,
   Megaphone,
   BrainCircuit,
-  Users,
-  TrendingUp,
   ClipboardCheck,
   Rocket,
   Lightbulb,
   HeartHandshake,
+  TrendingUp,
 } from 'lucide-react';
 import AnimatedHeroText from '@/components/home/AnimatedHeroText';
 
@@ -79,12 +78,12 @@ export default function Home() {
       <section className="w-full pt-24 md:pt-32 lg:pt-40">
         <div className="container px-4 md:px-6 text-center">
           <AnimatedHeroText />
-          <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl my-8 animate-in fade-in-2 slide-in-from-bottom-10 duration-1000 delay-200">
+          <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl my-8 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
             At Dreammakers digital, we combine creativity and technology to build
             unforgettable digital experiences that drive growth and connect you with
             your audience.
           </p>
-          <div className="space-x-4 animate-in fade-in-2 slide-in-from-bottom-12 duration-1000 delay-400">
+          <div className="space-x-4 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-400">
             <Button asChild size="lg">
               <Link href="/contact">Get Started</Link>
             </Button>
@@ -96,7 +95,7 @@ export default function Home() {
       </section>
 
       <section id="services" className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center animate-in fade-in-0 slide-in-from-bottom-4 duration-1000">
           <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm font-medium">
             Our Services
           </div>
@@ -110,32 +109,33 @@ export default function Home() {
         </div>
         <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:max-w-none lg:grid-cols-3 mt-12">
           {services.map((service, index) => (
-            <Card
-              key={index}
-              className="transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl border-transparent hover:border-border"
-            >
-              <CardHeader className="flex flex-col items-center text-center gap-4">
-                {service.icon}
-                <CardTitle className="text-2xl">
-                  {service.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-muted-foreground mb-4">
-                  {service.description}
-                </p>
-                <Button variant="link" asChild>
-                  <Link href={service.link}>Learn More</Link>
-                </Button>
-              </CardContent>
-            </Card>
+            <div key={index} className="animate-in fade-in-0 slide-in-from-bottom-4 duration-1000" style={{ animationDelay: `${200 * index}ms`}}>
+              <Card
+                className="transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl border-transparent hover:border-border h-full flex flex-col"
+              >
+                <CardHeader className="flex flex-col items-center text-center gap-4">
+                  {service.icon}
+                  <CardTitle className="text-2xl">
+                    {service.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="text-center flex flex-col flex-grow">
+                  <p className="text-muted-foreground mb-4 flex-grow">
+                    {service.description}
+                  </p>
+                  <Button variant="link" asChild>
+                    <Link href={service.link}>Learn More</Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
           ))}
         </div>
       </section>
       
       <section id="why-choose-us" className="bg-secondary">
         <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center animate-in fade-in-0 slide-in-from-bottom-4 duration-1000">
             <div className="inline-block rounded-lg bg-background px-3 py-1 text-sm font-medium">
               Why Choose Us
             </div>
@@ -148,29 +148,30 @@ export default function Home() {
           </div>
           <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:max-w-none lg:grid-cols-3 mt-12">
           {whyChooseUs.map((feature, index) => (
-            <Card
-              key={index}
-              className="transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl bg-background"
-            >
-              <CardHeader className="flex flex-col items-center text-center gap-4">
-                {feature.icon}
-                <CardTitle className="text-2xl">
-                  {feature.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-muted-foreground">
-                  {feature.description}
-                </p>
-              </CardContent>
-            </Card>
+            <div key={index} className="animate-in fade-in-0 slide-in-from-bottom-4 duration-1000" style={{ animationDelay: `${200 * index}ms`}}>
+                <Card
+                className="transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl bg-background"
+                >
+                <CardHeader className="flex flex-col items-center text-center gap-4">
+                    {feature.icon}
+                    <CardTitle className="text-2xl">
+                    {feature.title}
+                    </CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                    <p className="text-muted-foreground">
+                    {feature.description}
+                    </p>
+                </CardContent>
+                </Card>
+            </div>
           ))}
         </div>
         </div>
       </section>
 
       <section id="how-we-work" className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center animate-in fade-in-0 slide-in-from-bottom-4 duration-1000">
           <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm font-medium">
             Our Process
           </div>
@@ -183,28 +184,29 @@ export default function Home() {
         </div>
         <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:max-w-none lg:grid-cols-3 mt-12">
           {howWeWork.map((step, index) => (
-            <Card
-              key={index}
-              className="transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl border-transparent hover:border-border"
-            >
-              <CardHeader className="flex flex-col items-center text-center gap-4">
-                {step.icon}
-                <CardTitle className="text-2xl">
-                  {step.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-muted-foreground">
-                  {step.description}
-                </p>
-              </CardContent>
-            </Card>
+            <div key={index} className="animate-in fade-in-0 slide-in-from-bottom-4 duration-1000" style={{ animationDelay: `${200 * index}ms`}}>
+              <Card
+                className="transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl border-transparent hover:border-border"
+              >
+                <CardHeader className="flex flex-col items-center text-center gap-4">
+                  {step.icon}
+                  <CardTitle className="text-2xl">
+                    {step.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="text-center">
+                  <p className="text-muted-foreground">
+                    {step.description}
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
           ))}
         </div>
       </section>
 
       <section className="bg-secondary">
-        <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
+        <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 animate-in fade-in-0 slide-in-from-bottom-4 duration-1000">
           <div className="space-y-3">
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">
               Ready to Weave Your Digital Success Story?
