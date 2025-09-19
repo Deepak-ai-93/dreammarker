@@ -54,11 +54,6 @@ export default function Header() {
               <div className="flex flex-col space-y-6 p-6">
                 <div className="flex justify-between items-center">
                   <Logo />
-                  <SheetClose asChild>
-                    <Button variant="ghost" size="icon">
-                      <X className="h-6 w-6" />
-                    </Button>
-                  </SheetClose>
                 </div>
                 <nav className="flex flex-col space-y-4">
                   {navLinks.map((link) => (
