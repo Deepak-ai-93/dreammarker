@@ -28,21 +28,21 @@ export default function ContactPage() {
                 <MapPin className="w-6 h-6 text-primary mt-1" />
                 <div>
                   <h3 className="font-semibold">Our Office</h3>
-                  <p className="text-muted-foreground">123 Digital Ave, Webville, ST 12345</p>
+                  <p className="text-muted-foreground">Ground floor, Bhoomi Appartment, opposite Dr. Subhash University, Khamdhrol Road, Junagadh. 362001</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
                 <Mail className="w-6 h-6 text-primary mt-1" />
                 <div>
                   <h3 className="font-semibold">Email Us</h3>
-                  <p className="text-muted-foreground">contact@dreamweave.digital</p>
+                  <p className="text-muted-foreground">dreammakersdigital@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
                 <Phone className="w-6 h-6 text-primary mt-1" />
                 <div>
                   <h3 className="font-semibold">Call Us</h3>
-                  <p className="text-muted-foreground">(555) 123-4567</p>
+                  <p className="text-muted-foreground">+91 81280 30737</p>
                 </div>
               </div>
                <div>

@@ -88,9 +88,9 @@ export default function Footer() {
             <div>
               <h3 className="font-semibold mb-4">Contact</h3>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>contact@dreamweave.digital</li>
-                <li>(555) 123-4567</li>
-                <li>123 Digital Ave, Webville, ST 12345</li>
+                <li>dreammakersdigital@gmail.com</li>
+                <li>+91 81280 30737</li>
+                <li>Ground floor, Bhoomi Appartment, opposite Dr. Subhash University, Khamdhrol Road, Junagadh. 362001</li>
               </ul>
             </div>
           </div>
