@@ -182,29 +182,16 @@ export default function Home() {
             A streamlined and collaborative approach to delivering exceptional results.
           </p>
         </div>
-        <div className="relative mt-12">
-          <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-border" aria-hidden="true"></div>
-          {howWeWork.map((step, index) => (
-            <div key={index} className="relative mb-12">
-              <div className="flex items-center">
-                <div className={`flex-1 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
-                  {/* Empty div for spacing on one side */}
+        <div className="relative mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
+            {howWeWork.map((step, index) => (
+            <div key={index} className="relative flex flex-col items-center text-center animate-in fade-in-0 slide-in-from-bottom-4 duration-1000" style={{ animationDelay: `${200 * index}ms`}}>
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-secondary">
+                    {step.icon}
                 </div>
-                <div className="absolute left-1/2 -translate-x-1/2 w-10 h-10 rounded-full bg-background border-2 border-primary flex items-center justify-center">
-                  {step.icon}
-                </div>
-                <div className={`flex-1 ${index % 2 === 0 ? 'pl-8 text-left' : 'pr-8 text-right'}`}>
-                  {/* Empty div for spacing on other side */}
-                </div>
-              </div>
-              <div className={`mt-4 w-1/2 ${index % 2 === 0 ? 'ml-auto pr-16' : 'mr-auto pl-16'}`}>
-                 <div className={`p-6 rounded-lg bg-card shadow-sm border ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
-                  <h3 className="text-2xl font-bold mb-2">{step.title}</h3>
-                  <p className="text-muted-foreground">{step.description}</p>
-                </div>
-              </div>
+                <h3 className="text-2xl font-bold mb-2">{step.title}</h3>
+                <p className="text-muted-foreground">{step.description}</p>
             </div>
-          ))}
+            ))}
         </div>
       </section>
 
