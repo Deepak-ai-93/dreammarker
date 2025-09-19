@@ -76,7 +76,8 @@ const howWeWork = [
 export default function Home() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <section className="w-full pt-24 md:pt-32 lg:pt-40">
+      <section className="relative w-full pt-24 md:pt-32 lg:pt-40 overflow-hidden">
+        <div className="absolute top-0 left-0 -z-10 h-full w-full bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(132,109,248,0.1)_0%,rgba(255,255,255,0)_100%)] dark:bg-background dark:bg-[radial-gradient(100%_50%_at_50%_0%,rgba(132,109,248,0.15)_0%,rgba(255,255,255,0)_100%)]"></div>
         <div className="container px-4 md:px-6 text-center">
           <AnimatedHeroText />
           <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl my-8 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
