@@ -74,30 +74,32 @@ const howWeWork = [
   }
 ]
 
-const testimonials = [
+const featuredCaseStudies = [
   {
-    name: 'Sarah Johnson',
-    title: 'Marketing Director, Aura Cosmetics',
-    quote: "Dreammakers digital transformed our online presence. Their strategic approach to SEO and social media has been a game-changer for our brand's growth.",
-    avatar: 'https://picsum.photos/100/100?random=1',
-    dataAiHint: 'woman smiling',
+    title: 'E-commerce Sales Boost for Aura Cosmetics',
+    category: 'Digital Marketing',
+    description: 'Achieved a 150% increase in online sales through a targeted SEO and PPC campaign.',
+    image: 'https://picsum.photos/600/400?random=31',
+    dataAiHint: 'cosmetics product',
+    link: '#',
   },
   {
-    name: 'David Chen',
-    title: 'Founder, Momentum',
-    quote: "Working with this team was a fantastic experience. They're not just experts in their field; they're true partners dedicated to your success.",
-    avatar: 'https://picsum.photos/100/100?random=2',
-    dataAiHint: 'man portrait',
+    title: 'Brand Awareness for Tech Startup "Momentum"',
+    category: 'Social Media Marketing',
+    description: 'Grew social media following from 1k to 50k in three months with a viral content strategy.',
+    image: 'https://picsum.photos/600/400?random=32',
+    dataAiHint: 'tech startup',
+    link: '#',
   },
   {
-    name: 'Jessica Miller',
-    title: 'CEO, FreshPlate',
-    quote: "The new website they built for us is not only beautiful but also incredibly fast. We've seen a significant increase in conversions since launch.",
-    avatar: 'https://picsum.photos/100/100?random=3',
-    dataAiHint: 'woman professional',
+    title: 'Website Redesign for "FreshPlate" Meal Kits',
+    category: 'Web Development',
+    description: 'Launched a new, mobile-first website that decreased bounce rate by 40% and increased subscription sign-ups by 60%.',
+    image: 'https://picsum.photos/600/400?random=33',
+    dataAiHint: 'food delivery',
+    link: '#',
   },
-];
-
+]
 
 export default function Home() {
   return (
@@ -235,39 +237,51 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="testimonials" className="bg-secondary">
+      <section id="case-studies" className="bg-secondary">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center animate-in fade-in-0 slide-in-from-bottom-4 duration-1000">
             <div className="inline-block rounded-lg bg-background px-3 py-1 text-sm font-medium">
-              Testimonials
+              Our Work
             </div>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-              What Our Clients Say
+              Featured Case Studies
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Real stories from businesses we've helped to succeed.
+              A glimpse into the successful partnerships we've built with our clients.
             </p>
           </div>
           <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-1 md:gap-12 lg:max-w-none lg:grid-cols-3 mt-12">
-            {testimonials.map((testimonial, index) => (
+            {featuredCaseStudies.map((study, index) => (
               <div key={index} className="animate-in fade-in-0 slide-in-from-bottom-4 duration-1000" style={{ animationDelay: `${200 * index}ms` }}>
-                <Card className="h-full flex flex-col bg-background">
-                  <CardContent className="p-6 flex-grow">
-                    <p className="text-muted-foreground italic mb-6">"{testimonial.quote}"</p>
+                <Card
+                  className="overflow-hidden group transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col h-full bg-background"
+                >
+                  <Image
+                    src={study.image}
+                    data-ai-hint={study.dataAiHint}
+                    alt={study.title}
+                    width={600}
+                    height={400}
+                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <CardContent className="p-6 flex flex-col flex-grow">
+                    <p className="text-sm text-primary font-semibold mb-2">{study.category}</p>
+                    <h3 className="text-xl font-headline font-bold mb-2 flex-grow">{study.title}</h3>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      {study.description}
+                    </p>
+                    <Button variant="link" className="p-0 h-auto self-start">
+                      View Case Study
+                    </Button>
                   </CardContent>
-                  <CardHeader className="flex-row items-center gap-4 pt-0">
-                    <Avatar>
-                      <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint={testimonial.dataAiHint} />
-                      <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <CardTitle className="text-base">{testimonial.name}</CardTitle>
-                      <p className="text-sm text-muted-foreground">{testimonial.title}</p>
-                    </div>
-                  </CardHeader>
                 </Card>
               </div>
             ))}
+          </div>
+          <div className="text-center mt-12">
+            <Button asChild size="lg" variant="outline">
+              <Link href="/case-studies">More Case Studies</Link>
+            </Button>
           </div>
         </div>
       </section>
