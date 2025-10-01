@@ -74,33 +74,6 @@ const howWeWork = [
   }
 ]
 
-const featuredCaseStudies = [
-  {
-    title: 'E-commerce Sales Boost for Aura Cosmetics',
-    category: 'Digital Marketing',
-    description: 'Achieved a 150% increase in online sales through a targeted SEO and PPC campaign.',
-    image: 'https://picsum.photos/600/400?random=31',
-    dataAiHint: 'cosmetics product',
-    link: '#',
-  },
-  {
-    title: 'Brand Awareness for Tech Startup "Momentum"',
-    category: 'Social Media Marketing',
-    description: 'Grew social media following from 1k to 50k in three months with a viral content strategy.',
-    image: 'https://picsum.photos/600/400?random=32',
-    dataAiHint: 'tech startup',
-    link: '#',
-  },
-  {
-    title: 'Website Redesign for "FreshPlate" Meal Kits',
-    category: 'Web Development',
-    description: 'Launched a new, mobile-first website that decreased bounce rate by 40% and increased subscription sign-ups by 60%.',
-    image: 'https://picsum.photos/600/400?random=33',
-    dataAiHint: 'food delivery',
-    link: '#',
-  },
-]
-
 export default function Home() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
@@ -233,55 +206,6 @@ export default function Home() {
                 </Card>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="case-studies" className="bg-secondary">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col items-center justify-center space-y-4 text-center animate-in fade-in-0 slide-in-from-bottom-4 duration-1000">
-            <div className="inline-block rounded-lg bg-background px-3 py-1 text-sm font-medium">
-              Our Work
-            </div>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
-              Featured Case Studies
-            </h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              A glimpse into the successful partnerships we've built with our clients.
-            </p>
-          </div>
-          <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-1 md:gap-12 lg:max-w-none lg:grid-cols-3 mt-12">
-            {featuredCaseStudies.map((study, index) => (
-              <div key={index} className="animate-in fade-in-0 slide-in-from-bottom-4 duration-1000" style={{ animationDelay: `${200 * index}ms` }}>
-                <Card
-                  className="overflow-hidden group transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col h-full bg-background"
-                >
-                  <Image
-                    src={study.image}
-                    data-ai-hint={study.dataAiHint}
-                    alt={study.title}
-                    width={600}
-                    height={400}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <CardContent className="p-6 flex flex-col flex-grow">
-                    <p className="text-sm text-primary font-semibold mb-2">{study.category}</p>
-                    <h3 className="text-xl font-headline font-bold mb-2 flex-grow">{study.title}</h3>
-                    <p className="text-muted-foreground text-sm mb-4">
-                      {study.description}
-                    </p>
-                    <Button variant="link" className="p-0 h-auto self-start">
-                      View Case Study
-                    </Button>
-                  </CardContent>
-                </Card>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <Button asChild size="lg" variant="outline">
-              <Link href="/case-studies">More Case Studies</Link>
-            </Button>
           </div>
         </div>
       </section>
