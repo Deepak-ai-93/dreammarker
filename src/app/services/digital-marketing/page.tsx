@@ -76,25 +76,43 @@ export default function DigitalMarketingPage() {
         <div className="grid gap-8 md:grid-cols-3">
             <Card>
                 <CardContent className="p-6 text-center">
-                    <Search className="w-10 h-10 mx-auto mb-4 text-accent" />
+                    <Search className="w-10 h-10 mx-auto mb-4 text-primary" />
                     <h3 className="text-xl font-headline mb-2">Discovery & SEO Audit</h3>
                     <p className="text-muted-foreground text-sm">We start by understanding your business and conducting a thorough audit of your online presence to identify opportunities.</p>
                 </CardContent>
             </Card>
             <Card>
                 <CardContent className="p-6 text-center">
-                    <FileText className="w-10 h-10 mx-auto mb-4 text-accent" />
+                    <FileText className="w-10 h-10 mx-auto mb-4 text-primary" />
                     <h3 className="text-xl font-headline mb-2">Strategy & Content Plan</h3>
                     <p className="text-muted-foreground text-sm">Based on our findings, we develop a custom strategy and content plan designed to attract your target audience.</p>
                 </CardContent>
             </Card>
             <Card>
                 <CardContent className="p-6 text-center">
-                    <BarChart className="w-10 h-10 mx-auto mb-4 text-accent" />
+                    <BarChart className="w-10 h-10 mx-auto mb-4 text-primary" />
                     <h3 className="text-xl font-headline mb-2">Execution & Reporting</h3>
                     <p className="text-muted-foreground text-sm">We execute the plan, continuously monitor performance, and provide transparent reports on your campaign's progress.</p>
                 </CardContent>
             </Card>
+        </div>
+      </section>
+
+      <section className="bg-primary text-primary-foreground">
+        <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
+          <div className="space-y-3">
+            <h2 className="text-3xl font-headline font-bold tracking-tighter md:text-4xl/tight">
+              Ready to Boost Your Digital Presence?
+            </h2>
+            <p className="mx-auto max-w-[600px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              Let's create a digital marketing strategy that drives real results for your business.
+            </p>
+          </div>
+          <div className="mx-auto w-full max-w-sm">
+            <Button asChild size="lg" variant="secondary">
+              <Link href="/contact">Get in Touch</Link>
+            </Button>
+          </div>
         </div>
       </section>
     </>

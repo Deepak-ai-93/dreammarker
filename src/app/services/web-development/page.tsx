@@ -76,25 +76,42 @@ export default function WebDevelopmentPage() {
         <div className="grid gap-8 md:grid-cols-3">
             <Card>
                 <CardContent className="p-6 text-center">
-                    <Palette className="w-10 h-10 mx-auto mb-4 text-accent" />
+                    <Palette className="w-10 h-10 mx-auto mb-4 text-primary" />
                     <h3 className="text-xl font-headline mb-2">Design First</h3>
                     <p className="text-muted-foreground text-sm">We begin with a user-centric design process, focusing on aesthetics and usability to create an engaging interface.</p>
                 </CardContent>
             </Card>
             <Card>
                 <CardContent className="p-6 text-center">
-                    <Smartphone className="w-10 h-10 mx-auto mb-4 text-accent" />
+                    <Smartphone className="w-10 h-10 mx-auto mb-4 text-primary" />
                     <h3 className="text-xl font-headline mb-2">Mobile First</h3>
                     <p className="text-muted-foreground text-sm">All our websites are designed to be fully responsive, providing a flawless experience on desktops, tablets, and smartphones.</p>
                 </CardContent>
             </Card>
             <Card>
                 <CardContent className="p-6 text-center">
-                    <Rocket className="w-10 h-10 mx-auto mb-4 text-accent" />
+                    <Rocket className="w-10 h-10 mx-auto mb-4 text-primary" />
                     <h3 className="text-xl font-headline mb-2">Performance First</h3>
                     <p className="text-muted-foreground text-sm">We prioritize clean code and modern development practices to ensure your site is fast, secure, and ready to scale.</p>
                 </CardContent>
             </Card>
+        </div>
+      </section>
+      <section className="bg-primary text-primary-foreground">
+        <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
+          <div className="space-y-3">
+            <h2 className="text-3xl font-headline font-bold tracking-tighter md:text-4xl/tight">
+              Ready to Build Your New Website?
+            </h2>
+            <p className="mx-auto max-w-[600px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              Let's discuss your project and how we can bring your vision to life.
+            </p>
+          </div>
+          <div className="mx-auto w-full max-w-sm">
+            <Button asChild size="lg" variant="secondary">
+              <Link href="/contact">Request a Quote</Link>
+            </Button>
+          </div>
         </div>
       </section>
     </>

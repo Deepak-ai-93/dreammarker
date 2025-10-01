@@ -15,6 +15,7 @@ import {
   TrendingUp,
 } from 'lucide-react';
 import AnimatedHeroText from '@/components/home/AnimatedHeroText';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const services = [
   {
@@ -72,6 +73,31 @@ const howWeWork = [
     description: "We continuously analyze performance, optimize our approach, and identify new opportunities to drive sustainable growth."
   }
 ]
+
+const testimonials = [
+  {
+    name: 'Sarah Johnson',
+    title: 'Marketing Director, Aura Cosmetics',
+    quote: "Dreammakers digital transformed our online presence. Their strategic approach to SEO and social media has been a game-changer for our brand's growth.",
+    avatar: 'https://picsum.photos/100/100?random=1',
+    dataAiHint: 'woman smiling',
+  },
+  {
+    name: 'David Chen',
+    title: 'Founder, Momentum',
+    quote: "Working with this team was a fantastic experience. They're not just experts in their field; they're true partners dedicated to your success.",
+    avatar: 'https://picsum.photos/100/100?random=2',
+    dataAiHint: 'man portrait',
+  },
+  {
+    name: 'Jessica Miller',
+    title: 'CEO, FreshPlate',
+    quote: "The new website they built for us is not only beautiful but also incredibly fast. We've seen a significant increase in conversions since launch.",
+    avatar: 'https://picsum.photos/100/100?random=3',
+    dataAiHint: 'woman professional',
+  },
+];
+
 
 export default function Home() {
   return (
@@ -209,7 +235,44 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-secondary">
+      <section id="testimonials" className="bg-secondary">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center animate-in fade-in-0 slide-in-from-bottom-4 duration-1000">
+            <div className="inline-block rounded-lg bg-background px-3 py-1 text-sm font-medium">
+              Testimonials
+            </div>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+              What Our Clients Say
+            </h2>
+            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              Real stories from businesses we've helped to succeed.
+            </p>
+          </div>
+          <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-1 md:gap-12 lg:max-w-none lg:grid-cols-3 mt-12">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="animate-in fade-in-0 slide-in-from-bottom-4 duration-1000" style={{ animationDelay: `${200 * index}ms` }}>
+                <Card className="h-full flex flex-col bg-background">
+                  <CardContent className="p-6 flex-grow">
+                    <p className="text-muted-foreground italic mb-6">"{testimonial.quote}"</p>
+                  </CardContent>
+                  <CardHeader className="flex-row items-center gap-4 pt-0">
+                    <Avatar>
+                      <AvatarImage src={testimonial.avatar} alt={testimonial.name} data-ai-hint={testimonial.dataAiHint} />
+                      <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <CardTitle className="text-base">{testimonial.name}</CardTitle>
+                      <p className="text-sm text-muted-foreground">{testimonial.title}</p>
+                    </div>
+                  </CardHeader>
+                </Card>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-background">
         <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6 animate-in fade-in-0 slide-in-from-bottom-4 duration-1000">
           <div className="space-y-3">
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">

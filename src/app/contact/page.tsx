@@ -1,5 +1,26 @@
 import ContactForm from '@/components/forms/ContactForm';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+
+
+const faqs = [
+  {
+    question: 'What services do you offer?',
+    answer: 'We offer a full suite of digital services, including digital marketing (SEO, PPC, content marketing), social media marketing, and web development.'
+  },
+  {
+    question: 'What is your process?',
+    answer: 'Our process is collaborative and transparent. We start with a discovery phase to understand your goals, then move to strategy, execution, and finally, ongoing optimization and growth.'
+  },
+  {
+    question: 'How much do your services cost?',
+    answer: 'Our pricing is customized based on the specific needs and goals of each client. We recommend getting in touch for a free consultation and a detailed proposal.'
+  },
+   {
+    question: 'How long does it take to see results?',
+    answer: 'The timeline for results can vary depending on the services and your industry. For SEO, it can take 3-6 months to see significant results, while PPC and social media campaigns can generate traffic more quickly.'
+  }
+]
 
 export default function ContactPage() {
   return (
@@ -45,10 +66,13 @@ export default function ContactPage() {
                   <p className="text-muted-foreground">+91 81280 30737</p>
                 </div>
               </div>
-               <div>
-                 <h3 className="font-semibold mb-2">Business Hours</h3>
+              <div className="flex items-start space-x-4">
+                <Clock className="w-6 h-6 text-primary mt-1" />
+                <div>
+                  <h3 className="font-semibold">Business Hours</h3>
                   <p className="text-muted-foreground">Monday - Friday: 9am - 5pm</p>
                   <p className="text-muted-foreground">Saturday - Sunday: Closed</p>
+                </div>
               </div>
             </div>
             <div className="mt-8">
@@ -64,6 +88,24 @@ export default function ContactPage() {
               ></iframe>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-secondary/30">
+        <div className="container px-4 md:px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-headline font-bold">Frequently Asked Questions</h2>
+          </div>
+          <Accordion type="single" collapsible className="w-full max-w-3xl mx-auto">
+            {faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`item-${index}`}>
+                <AccordionTrigger>{faq.question}</AccordionTrigger>
+                <AccordionContent>
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </section>
     </>

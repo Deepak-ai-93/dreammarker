@@ -76,25 +76,43 @@ export default function SocialMediaPage() {
         <div className="grid gap-8 md:grid-cols-3">
             <Card>
                 <CardContent className="p-6 text-center">
-                    <Users className="w-10 h-10 mx-auto mb-4 text-accent" />
+                    <Users className="w-10 h-10 mx-auto mb-4 text-primary" />
                     <h3 className="text-xl font-headline mb-2">Audience Analysis</h3>
                     <p className="text-muted-foreground text-sm">We dive deep into your target audience demographics, interests, and online behavior to inform our strategy.</p>
                 </CardContent>
             </Card>
             <Card>
                 <CardContent className="p-6 text-center">
-                    <PenSquare className="w-10 h-10 mx-auto mb-4 text-accent" />
+                    <PenSquare className="w-10 h-10 mx-auto mb-4 text-primary" />
                     <h3 className="text-xl font-headline mb-2">Content Pillars</h3>
                     <p className="text-muted-foreground text-sm">We establish key content themes that align with your brand and resonate with your audience to ensure consistency.</p>
                 </CardContent>
             </Card>
             <Card>
                 <CardContent className="p-6 text-center">
-                    <Share2 className="w-10 h-10 mx-auto mb-4 text-accent" />
+                    <Share2 className="w-10 h-10 mx-auto mb-4 text-primary" />
                     <h3 className="text-xl font-headline mb-2">Engage & Grow</h3>
                     <p className="text-muted-foreground text-sm">We actively manage your community, foster conversations, and run targeted campaigns to grow your following.</p>
                 </CardContent>
             </Card>
+        </div>
+      </section>
+
+      <section className="bg-primary text-primary-foreground">
+        <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
+          <div className="space-y-3">
+            <h2 className="text-3xl font-headline font-bold tracking-tighter md:text-4xl/tight">
+              Ready to Grow Your Social Following?
+            </h2>
+            <p className="mx-auto max-w-[600px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              Let's create a social media strategy that builds community and drives engagement.
+            </p>
+          </div>
+          <div className="mx-auto w-full max-w-sm">
+            <Button asChild size="lg" variant="secondary">
+              <Link href="/contact">Schedule a Call</Link>
+            </Button>
+          </div>
         </div>
       </section>
     </>

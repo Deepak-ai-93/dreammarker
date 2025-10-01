@@ -1,12 +1,19 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Card, CardContent } from '@/components/ui/card';
-import { Award, Target, Eye } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Award, Target, Eye, Linkedin } from 'lucide-react';
 import Image from 'next/image';
 
 const values = [
   { icon: <Award className="w-8 h-8 text-primary" />, title: 'Excellence', description: 'We are committed to delivering the highest quality work and exceptional results for our clients.' },
   { icon: <Target className="w-8 h-8 text-primary" />, title: 'Innovation', description: 'We stay at the forefront of digital trends to provide creative and effective solutions.' },
   { icon: <Eye className="w-8 h-8 text-primary" />, title: 'Transparency', description: 'We believe in open communication and building trust through honest collaboration.' },
+]
+
+const team = [
+  { name: 'John Doe', role: 'CEO & Founder', image: 'https://picsum.photos/200/200?random=11', dataAiHint: 'male ceo' },
+  { name: 'Jane Smith', role: 'Lead Digital Strategist', image: 'https://picsum.photos/200/200?random=12', dataAiHint: 'female professional' },
+  { name: 'Michael Brown', role: 'Head of Web Development', image: 'https://picsum.photos/200/200?random=13', dataAiHint: 'male developer' },
+  { name: 'Emily White', role: 'Social Media Manager', image: 'https://picsum.photos/200/200?random=14', dataAiHint: 'female social media' },
 ]
 
 export default function AboutPage() {
@@ -64,6 +71,29 @@ export default function AboutPage() {
                 </Card>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section id="team" className="container px-4 md:px-6">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-headline font-bold">Meet the Team</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto mt-2">The talented individuals powering your digital success.</p>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {team.map((member) => (
+            <Card key={member.name} className="text-center overflow-hidden group">
+              <div className="relative">
+                <Image src={member.image} data-ai-hint={member.dataAiHint} alt={member.name} width={200} height={200} className="w-full h-auto aspect-square object-cover" />
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <a href="#" className="text-white hover:text-primary"><Linkedin size={24} /></a>
+                </div>
+              </div>
+              <CardHeader className="p-4">
+                <CardTitle className="text-lg">{member.name}</CardTitle>
+                <p className="text-sm text-primary">{member.role}</p>
+              </CardHeader>
+            </Card>
+          ))}
         </div>
       </section>
     </>

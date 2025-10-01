@@ -97,6 +97,24 @@ export default function CaseStudiesPage() {
           ))}
         </div>
       </section>
+
+      <section className="bg-primary/10">
+        <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
+          <div className="space-y-3">
+            <h2 className="text-3xl font-headline font-bold tracking-tighter md:text-4xl/tight">
+              Ready to Be Our Next Success Story?
+            </h2>
+            <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              Let's talk about how we can help you achieve your business goals.
+            </p>
+          </div>
+          <div className="mx-auto w-full max-w-sm space-y-4 py-4">
+            <Button asChild size="lg">
+              <Link href="/contact">Get a Free Consultation</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

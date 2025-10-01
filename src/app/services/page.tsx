@@ -63,18 +63,18 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-accent/20">
+      <section className="bg-primary text-primary-foreground">
         <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
           <div className="space-y-3">
             <h2 className="text-3xl font-headline font-bold tracking-tighter md:text-4xl/tight">
               Have a Project in Mind?
             </h2>
-            <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="mx-auto max-w-[600px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               We're ready to listen. Let's discuss how we can tailor our services to meet your unique needs.
             </p>
           </div>
           <div className="mx-auto w-full max-w-sm">
-            <Button asChild size="lg">
+            <Button asChild size="lg" variant="secondary">
               <Link href="/contact">Request a Consultation</Link>
             </Button>
           </div>

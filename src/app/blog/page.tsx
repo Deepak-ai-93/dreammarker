@@ -1,6 +1,8 @@
 import BlogIdeaGenerator from '@/components/blog/BlogIdeaGenerator';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Send } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -79,8 +81,20 @@ export default function BlogPage() {
             </div>
           </div>
           <aside className="md:col-span-2">
-            <div className="sticky top-24">
+            <div className="sticky top-24 space-y-8">
               <BlogIdeaGenerator />
+              <Card>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-headline font-bold mb-4">Newsletter</h3>
+                  <p className="text-muted-foreground text-sm mb-4">Subscribe to get our latest insights delivered to your inbox.</p>
+                  <form className="flex space-x-2">
+                    <Input type="email" placeholder="Enter your email" className="flex-1" />
+                    <Button type="submit" size="icon">
+                      <Send className="w-4 h-4" />
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
             </div>
           </aside>
         </div>
